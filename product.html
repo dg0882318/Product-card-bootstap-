@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Detail</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container product-page mt-5">
+  <div class="row">
+
+    <!-- LEFT SIDE IMAGES -->
+  <div class="col-md-6 d-flex">
+  <!-- MAIN IMAGE -->
+  <img id="mainImg" src="" class="img-fluid main-img">
+
+  <!-- THUMBNAILS -->
+  <div class="d-flex flex-column gap-2 ms-2">
+    <img id="img1" class="thumb">
+    <img id="img2" class="thumb">
+    <img id="img3" class="thumb">
+    <img id="img4" class="thumb">
+  </div>
+</div>
+    <!-- RIGHT SIDE DETAILS -->
+    <div class="col-md-6">
+      <h2 id="productName"></h2>
+      <p class="price" id="productPrice"></p>
+
+      <div class="mb-3">
+        <button onclick="decreaseQty()">-</button>
+        <span id="qty">1</span>
+        <button onclick="increaseQty()">+</button>
+      </div>
+
+      <button class="btn btn-dark w-100 mb-2">Add to Cart</button>
+      <button class="btn btn-outline-dark w-100 mb-3">Buy Now</button>
+
+      <p id="productDesc"></p>
+
+      <!-- ACCORDION -->
+    <div class="accordion" id="accordionExample">
+
+  <!-- Product Info (OPEN BY DEFAULT) -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#info">
+        Product Info
+      </button>
+    </h2>
+    <div id="info" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        <ul>
+          <li>High quality fabric material</li>
+          <li>Comfortable for daily wear</li>
+          <li>Available in multiple sizes</li>
+          <li>Durable stitching</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Return Policy -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#return">
+        Return Policy
+      </button>
+    </h2>
+    <div id="return" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <ul>
+          <li>Return within 7 days</li>
+          <li>Unused product only</li>
+          <li>Original packaging required</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shipping Info -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#shipping">
+        Shipping Info
+      </button>
+    </h2>
+    <div id="shipping" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <ul>
+          <li>Delivery in 3–5 days</li>
+          <li>Cash on delivery available</li>
+          <li>Tracking provided</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+ 
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

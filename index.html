@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Products</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Our Products</h1>
+
+<div class="product-container">
+
+  <!-- Product 1 -->
+<div class="product-card" onclick="goToProduct(
+'Adidas Track Suit',
+'Rs 3999',
+'images/ad-tracksuit.jpg',
+'images/ad-tracksuit1.jpg',
+'images/ad-tracksuit3.jpg',
+'images/ad-tracksuit4.jpg',
+'High quality Adidas track suit for sports and casual wear.'
+)">
+    <img src="images/ad-tracksuit.jpg">
+    <h2 class="h3">Adidas Track Suit</h2>
+    <p>Rs 3999</p>
+    <button>View Details</button>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card" onclick="goToProduct(
+'Black Hoodie',
+'Rs 2500',
+'images/black.jpg',
+'images/black1.jpg',
+'images/black2.jpg',
+'images/black3.jpg',
+'Warm and comfortable black hoodie. Perfect for casual wear.',
+)">
+    <img src="images/black.jpg">
+    <h2 class="h3">Black Hoodie</h2>
+    <p>Rs 2500</p>
+    <button>View Details</button>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card" onclick="goToProduct(
+'running shoes',
+'Rs 3200',
+'images/shoe.jpg',
+'images/shoe1.jpg',
+'images/shoe2.jpg',
+'images/shoe3.jpg',
+'Lightweight running shoes for daily use.'
+)">
+    <img src="images/shoe.jpg">
+    <h2 class="h3">Running Shoes</h2>
+    <p>Rs 3200</p>
+    <button>View Details</button>
+  </div>
+
+  
+
+  <!-- Product 4 -->
+ <div class="product-card" onclick="goToProduct(
+'White T-Shirt',
+'Rs 1200',
+'images/white.jpg',
+'images/white1.jpg',
+'images/white2.jpg',
+'images/white3.jpg',
+'Lightweight running shoes for daily use.'
+)">
+    
+
+    <img src="images/white.jpg">
+    <h2 class="h3">White T-Shirt</h2>
+    <p>Rs 1200</p>
+    <button>View Details</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
