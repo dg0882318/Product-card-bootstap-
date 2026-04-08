@@ -49,3 +49,103 @@ function decreaseQty(){
     document.getElementById("qty").innerText = qty;
   }
 }
+
+
+// ADD TO CART
+function addToCart(){
+  const product = {
+    name: document.getElementById("productName").innerText,
+    price: document.getElementById("productPrice").innerText,
+    qty: qty,
+    img: document.getElementById("mainImg").src
+  };
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(product);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Added to Cart ✅");
+}
+// buy now 
+function buyNow(){
+
+  const product = {
+    name: document.getElementById("productName").innerText,
+    price: document.getElementById("productPrice").innerText,
+    qty: qty,
+    img: document.getElementById("mainImg").src
+  };
+
+  // ❗ CLEAR OLD CART
+  let cart = [];
+  cart.push(product);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  window.location.href = "checkout.html";
+}
+
+// CHECKOUT PAGE LOAD
+if(window.location.pathname.includes("checkout.html")){
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let container = document.getElementById("orderItems");
+
+  let total = 0;
+
+  cart.forEach(item => {
+
+    let price = parseInt(item.price.replace("Rs", ""));
+    let subtotal = price * item.qty;
+
+    total += subtotal;
+
+    container.innerHTML += `
+      <div class="item">
+        <span>${item.name} x${item.qty}</span>
+        <span>Rs ${subtotal}</span>
+      </div>
+    `;
+  });
+
+  document.getElementById("total").innerText = "Total: Rs " + total;
+}
+
+
+
+// PLACE ORDER
+function placeOrder(e){
+  e.preventDefault(); // stop refresh
+
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let address = document.getElementById("address").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+
+  if(!name || !email || !address || !phone){
+    alert("Please fill all details ❌");
+    return;
+  }
+
+  let orderId = "ORD" + Date.now();
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let orderData = {
+    orderId,
+    name,
+    email,
+    address,
+    phone,
+    cart
+  };
+
+  // SAVE FULL ORDER
+  localStorage.setItem("orderData", JSON.stringify(orderData));
+
+  localStorage.removeItem("cart");
+
+  window.location.href = "success.html";
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Success</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="success-container">
+  <h1>✅ Order Confirmed</h1>
+  <p>Thank you for your purchase!</p>
+
+  <h3 id="orderId"></h3>
+
+  <div class="details">
+    <h4>Customer Info</h4>
+    <p id="custName"></p>
+    <p id="custEmail"></p>
+    <p id="custAddress"></p>
+    <p id="custPhone"></p>
+
+    <h4>Order Items</h4>
+    <div id="items"></div>
+
+    <h3 id="total"></h3>
+  </div>
+
+  <a href="index.html" class="btn-home">Continue Shopping</a>
+</div>
+
+<script>
+let data = JSON.parse(localStorage.getItem("orderData"));
+
+if(data){
+
+  document.getElementById("orderId").innerText = "Tracking ID: " + data.orderId;
+  document.getElementById("custName").innerText = "Name: " + data.name;
+  document.getElementById("custEmail").innerText = "Email: " + data.email;
+  document.getElementById("custAddress").innerText = "Address: " + data.address;
+  document.getElementById("custPhone").innerText = "Phone: " + data.phone;
+
+  let total = 0;
+
+  data.cart.forEach(item => {
+    let price = parseInt(item.price.replace("Rs",""));
+    let subtotal = price * item.qty;
+    total += subtotal;
+
+    document.getElementById("items").innerHTML += `
+      <div class="item">
+        <span>${item.name} x${item.qty}</span>
+        <span>Rs ${subtotal}</span>
+      </div>
+    `;
+  });
+
+  document.getElementById("total").innerText = "Total: Rs " + total;
+}
+</script>
+
+</body>
+</html>
