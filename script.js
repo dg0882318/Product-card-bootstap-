@@ -67,7 +67,6 @@ function addToCart(){
 
   alert("Added to Cart ✅");
 }
-// buy now 
 function buyNow(){
 
   const product = {
@@ -116,7 +115,7 @@ if(window.location.pathname.includes("checkout.html")){
 
 // PLACE ORDER
 function placeOrder(e){
-  e.preventDefault(); // stop refresh
+  e.preventDefault(); 
 
   let name = document.getElementById("name").value.trim();
   let email = document.getElementById("email").value.trim();
