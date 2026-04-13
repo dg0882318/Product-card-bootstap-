@@ -211,7 +211,7 @@ body {
     flex: 1;
 }
 
-/* ORDER SUM*/
+/* order  summary*/
 .container-checkout .order-summary{
     margin-top: 25px;
     background: #fff;
@@ -219,7 +219,7 @@ body {
     border-radius: 10px;
 }
 
-/* ITEMS */
+/* items */
 .container-checkout .item{
     display: flex;
     justify-content: space-between;
@@ -228,7 +228,7 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-/* BUTTON */
+/* button */
 .container-checkout .btn{
     width: 100%;
     padding: 15px;
@@ -246,7 +246,7 @@ body {
 
 
 
-/* success page */
+/* success pg */
 .success-container{
     max-width: 700px;
     margin: 50px auto;
