@@ -49,9 +49,8 @@ function decreaseQty(){
     document.getElementById("qty").innerText = qty;
   }
 }
+// ADD  CART
 
-
-// ADD to  CART
 function addToCart(){
   const product = {
     name: document.getElementById("productName").innerText,
@@ -84,8 +83,8 @@ function buyNow(){
 
   window.location.href = "checkout.html";
 }
-
 // checkout
+
 if(window.location.pathname.includes("checkout.html")){
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -214,7 +214,11 @@ body {
     flex: 1;
 }
 
+<<<<<<< HEAD
 /* order  */
+=======
+/* order  summary*/
+>>>>>>> bae2f0ff8d30b8807200b94b2850519eb1a27e9e
 .container-checkout .order-summary{
     margin-top: 25px;
     background: #fff;
@@ -249,7 +253,11 @@ body {
 
 
 
+<<<<<<< HEAD
 /* success */
+=======
+/* success pg */
+>>>>>>> bae2f0ff8d30b8807200b94b2850519eb1a27e9e
 .success-container{
     max-width: 700px;
     margin: 50px auto;
