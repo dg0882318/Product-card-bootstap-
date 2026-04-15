@@ -169,7 +169,7 @@ body {
     gap: 20px;
 }
 
-/* TITLES */
+/* titles*/
 .container-checkout .title{
     font-size: 20px;
     margin-bottom: 15px;
@@ -178,7 +178,9 @@ body {
 .container-checkout form {
   width: 100%;
 }
-/* INPUTS */
+/* input */
+
+
 .container-checkout .inputBox{
     margin-bottom: 15px;
 }
@@ -207,11 +209,12 @@ body {
     gap: 10px;
 }
 
+
 .container-checkout .flex .inputBox{
     flex: 1;
 }
 
-/* order  summary*/
+/* order  */
 .container-checkout .order-summary{
     margin-top: 25px;
     background: #fff;
@@ -246,7 +249,7 @@ body {
 
 
 
-/* success pg */
+/* success */
 .success-container{
     max-width: 700px;
     margin: 50px auto;
