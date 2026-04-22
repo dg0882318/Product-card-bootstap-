@@ -4,7 +4,7 @@ function goToProduct(name, price, img1, img2, img3, img4, desc){
   `product.html?name=${name}&price=${price}&img1=${img1}&img2=${img2}&img3=${img3}&img4=${img4}&desc=${desc}`;
 }
 
-// Run only on product page
+// Run only on product page look
 if(window.location.pathname.includes("product.html")){
 
   const params = new URLSearchParams(window.location.search);
@@ -28,7 +28,7 @@ if(window.location.pathname.includes("product.html")){
   document.getElementById("img3").src = img3;
   document.getElementById("img4").src = img4;
 
-  // Thumbnail click
+  // Thumbnail click changes photos
   let thumbs = document.querySelectorAll(".thumb");
   thumbs.forEach(img => {
     img.onclick = function(){
@@ -49,7 +49,7 @@ function decreaseQty(){
     document.getElementById("qty").innerText = qty;
   }
 }
-// ADD  CART
+// ADD  CART function 
 
 function addToCart(){
   const product = {
@@ -75,7 +75,7 @@ function buyNow(){
     img: document.getElementById("mainImg").src
   };
 
-  // ❗ CLEAR OLD CART
+  // ❗ CLEAR OLD CART function
   let cart = [];
   cart.push(product);
 
