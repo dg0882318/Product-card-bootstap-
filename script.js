@@ -5,6 +5,8 @@ function goToProduct(name, price, img1, img2, img3, img4, desc){
 }
 
 // Run only on product page look
+
+//  img 1-4 name price 
 if(window.location.pathname.includes("product.html")){
 
   const params = new URLSearchParams(window.location.search);
@@ -27,6 +29,8 @@ if(window.location.pathname.includes("product.html")){
   document.getElementById("img2").src = img2;
   document.getElementById("img3").src = img3;
   document.getElementById("img4").src = img4;
+
+
 
   // Thumbnail click changes photos
   let thumbs = document.querySelectorAll(".thumb");
