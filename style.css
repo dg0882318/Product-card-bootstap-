@@ -162,7 +162,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
 } 
 
-/* ROW */
+/* ROW COLUMN */
 .container-checkout .row{
     display: flex;
     flex-wrap: wrap;   
@@ -248,7 +248,7 @@ body {
     background: #333;
 }
 
-/* success pg */
+/* success page */
 
 .success-container{
     max-width: 700px;
@@ -285,3 +285,6 @@ body {
     border-radius: 8px;
     text-decoration: none;
 }
+
+
+/*   four card with special work       */

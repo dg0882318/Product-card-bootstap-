@@ -32,7 +32,7 @@ if(window.location.pathname.includes("product.html")){
 
 
 
-  // Thumbnail click changes photos
+  // Thumbnail click changes photos lioke hover etc
   let thumbs = document.querySelectorAll(".thumb");
   thumbs.forEach(img => {
     img.onclick = function(){
@@ -41,7 +41,7 @@ if(window.location.pathname.includes("product.html")){
   });
 }
 
-// Quantity
+// Quantity to change
 let qty = 1;
 function increaseQty(){
   qty++;
@@ -53,7 +53,7 @@ function decreaseQty(){
     document.getElementById("qty").innerText = qty;
   }
 }
-// ADD  CART function 
+// Add to cart function 
 
 function addToCart(){
   const product = {
